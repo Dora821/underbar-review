@@ -143,7 +143,20 @@
   //   }); // should be 5, regardless of the iterator function passed in
   //          No accumulator is given so the first element is used.
   _.reduce = function(collection, iterator, accumulator) {
+   //input: collection, with an optional accumulator
+    //output: accumulated value / object
+    //constraints: none
+    //edge cases: if an accumulator is provided or not
+    accumulator = accumulator || collection[0];
+
+    _.each(collection, function(item){
+      console.log(accumulator, item)
+      accumulator += iterator(accumulator, item);
+    });
+
+    return accumulator;
   };
+
 
   // Determine if the array or object contains a given value (using `===`).
   _.contains = function(collection, target) {
