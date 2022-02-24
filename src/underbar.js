@@ -169,8 +169,6 @@
   //   }); // should be 5, regardless of the iterator function passed in
   //          No accumulator is given so the first element is used.
   _.reduce = function(collection, iterator, accumulator) {
-<<<<<<< HEAD
-<<<<<<< HEAD
    //input: collection, with an optional accumulator
     //output: accumulated value / object
     //constraints: none
@@ -182,15 +180,14 @@
       accumulator += iterator(accumulator, item);
     });
 
-=======
+
     //input: collection, with an optional accumulator
     //output: accumulated value / object
     //constraints: none
     //edge cases: if an accumulator is provided or not
     //if there is no accumulator, set a variable equal to false(noAcc).
     //then do this:
-=======
->>>>>>> f63608fa1aff50c397c6fc52633294a5ceea16bd
+
     var hasAccumulator = true;
     if(accumulator === undefined) {
       hasAccumulator = false;
@@ -203,7 +200,6 @@
       }
       accumulator = iterator(accumulator, item);
     });
->>>>>>> e45bd9dc482957a763e94714f29505ffdd56e6d3
     return accumulator;
   };
 
