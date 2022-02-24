@@ -173,12 +173,12 @@
     //output: accumulated value / object
     //constraints: none
     //edge cases: if an accumulator is provided or not
-    accumulator = accumulator || collection[0];
+    // accumulator = accumulator || collection[0];
 
-    _.each(collection, function(item){
-      console.log(accumulator, item)
-      accumulator += iterator(accumulator, item);
-    });
+    // _.each(collection, function(item){
+    //   console.log(accumulator, item)
+    //   accumulator += iterator(accumulator, item);
+    // });
 
 
     //input: collection, with an optional accumulator
